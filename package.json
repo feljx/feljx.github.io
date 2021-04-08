@@ -1,0 +1,19 @@
+{
+  "name": "feljx.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feljx/feljx.github.io.git"
+  },
+  "author": "feljx",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/feljx/feljx.github.io/issues"
+  },
+  "homepage": "https://github.com/feljx/feljx.github.io#readme"
+}
