@@ -4,6 +4,8 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
+    "start": "webpack serve --config-name dev",
+    "build": "webpack --config-name build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,23 @@
   "bugs": {
     "url": "https://github.com/feljx/feljx.github.io/issues"
   },
-  "homepage": "https://github.com/feljx/feljx.github.io#readme"
+  "homepage": "https://github.com/feljx/feljx.github.io#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@types/webpack": "^5.28.0",
+    "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^8.1.1",
+    "webpack": "^5.31.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
 }
