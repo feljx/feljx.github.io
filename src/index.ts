@@ -1,3 +1,4 @@
+import './styles.css'
 import { createElement } from 'react'
 import { render } from 'react-dom'
 import { Home } from './Home'
