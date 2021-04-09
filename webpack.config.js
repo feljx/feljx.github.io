@@ -38,8 +38,8 @@ function Config (moreOptions) {
             // STATIC ASSET COPY
             new CopyPlugin({
                 patterns: [
-                    { from: 'src/index.html', to: '' },
-                    { from: 'src/CNAME', to: '' }
+                    { from: 'src/assets/index.html', to: '' },
+                    { from: 'src/assets/CNAME', to: '' }
                 ]
             }),
             // CSS STUFF
