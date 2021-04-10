@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+.animate-title {
+    position: fixed; /* make sure it stays put so we can see it! */
+
+    animation: rotate 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+
 @tailwind utilities;

@@ -1,5 +1,5 @@
 import React from 'react'
 
-export const Home = (props) => {
+export const About = (props: any) => {
     return <div>Hello World.</div>
 }

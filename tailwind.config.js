@@ -1,26 +1,17 @@
 // tailwind.config.js
 module.exports = {
     purge: [ './src/**/*.html', './src/**/*.vue', './src/**/*.jsx', './src/**/*.tsx' ],
-    theme: { colors: Colors() },
+    theme: {
+        colors: Colors(),
+        fontFamily: {
+            title: [ 'Arial Narrow', 'Amatic SC', 'Arial Narrow' ]
+        }
+    },
     variants: {},
     plugins: []
 }
 
 function Colors () {
-    const a = '#FF6A92'
-    const b = '#553772'
-    const c = '#8f3b76'
-    const d = '#c7417b'
-    const e = '#f5487f'
-
-    const M = '#eaeef0'
-
-    const X = '#4d7f80'
-    const Y = '#2f444b'
-    const Z = '#22282a'
-
-    const v = '#eb6115'
-    const w = '#f79e0c'
     return {
         transparent: 'transparent',
         current: 'currentColor',

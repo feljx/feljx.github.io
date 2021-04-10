@@ -1,26 +1,50 @@
 const { resolve } = require('path')
 const CopyPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const { HotModuleReplacementPlugin } = require('webpack')
 
 // Webpack configurations
 module.exports = [
+    // PRODUCTION
     Config({
         name: 'prod',
         mode: 'production',
         output: {
             path: resolve('docs'),
-            filename: 'index.js'
-        }
+            filename: '[name].js'
+        },
+        plugins: [
+            new CopyPlugin({
+                patterns: [ { from: 'src/assets/CNAME', to: '' } ]
+            }),
+            new MiniCssExtractPlugin({
+                filename: '[name].bundle.css',
+                chunkFilename: '[id].css'
+            }),
+            new HtmlWebpackPlugin({
+                title: 'Template',
+                template: './src/assets/index.html'
+            })
+        ]
     }),
+    // DEVELOPMENT
     Config({
         name: 'dev',
         mode: 'development',
         output: {
             path: resolve('dev'),
-            filename: 'index.js'
+            filename: '[name].js'
         },
-        devtool: 'source-map'
+        devtool: 'source-map',
+        plugins: [
+            new HtmlWebpackPlugin({
+                title: 'Template',
+                template: './src/assets/index.html'
+            }),
+            new HotModuleReplacementPlugin()
+        ]
     })
 ]
 
@@ -29,27 +53,12 @@ function Config (moreOptions) {
     const isDev = moreOptions.name === 'dev'
     // Return configuration
     return {
-        // ENTRY AND FILE EXTENSIONS
+        // ENTRY
         entry: './src/index.ts',
+        // FILE EXTENSIONS
         resolve: {
             extensions: [ '.ts', '.tsx', '.js', '.json' ]
         },
-        plugins: [
-            // STATIC ASSET COPY
-            new CopyPlugin({
-                patterns: [
-                    { from: 'src/assets/index.html', to: '' },
-                    { from: 'src/assets/CNAME', to: '' }
-                ]
-            }),
-            // CSS STUFF
-            new MiniCssExtractPlugin({
-                filename: '[name].bundle.css',
-                chunkFilename: '[id].css'
-            }),
-            // HMR MAGIC
-            new HotModuleReplacementPlugin()
-        ],
         // MODULE
         module: {
             rules: [
@@ -76,7 +85,7 @@ function Config (moreOptions) {
                     include: resolve(__dirname, 'src'),
                     exclude: /node_modules/,
                     use: [
-                        'style-loader',
+                        isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
                         {
                             loader: 'css-loader',
                             options: {
@@ -86,6 +95,13 @@ function Config (moreOptions) {
                         'postcss-loader'
                     ]
                 }
+            ]
+        },
+        optimization: {
+            minimizer: [
+                // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+                // `...`,
+                new CssMinimizerPlugin()
             ]
         },
         // MERGE GIVEN OPTIONS
