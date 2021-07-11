@@ -1,11 +1,4 @@
-import './assets/styles.css'
-import { createElement } from 'react'
-import { render } from 'react-dom'
-import { Page } from './Page'
-
-const container = document.getElementById('react')
-const home = createElement(Page)
-render(home, container)
+import './global.css'
 
 // Track scroll position as custom CSS variable on document body
 window.addEventListener(
