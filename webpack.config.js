@@ -104,6 +104,14 @@ const Config = (config_data) => ({
                     }
                     // 'postcss-loader'
                 ]
+            },
+            {
+                test: /\.(jpg|jpeg|png|woff|woff2|eot|ttf|svg)$/,
+                type: 'asset'
+            },
+            {
+                test: /\.(html)$/,
+                use: [ 'html-loader' ]
             }
         ]
     },

@@ -1,0 +1,47 @@
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-body {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    font-style: italic;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-body > *:not(:last-child) {
+    margin-bottom: 12rem;
+}
+
+.portfolio-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    font-size: 1.4rem;
+}
+
+.portfolio-item:last-child {
+    margin-bottom: 6rem;
+}
+
+.portfolio-item-title {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--green);
+}
+
+.portfolio-item-description {
+}
+
+.portfolio-item-image {
+    margin-top: 1rem;
+    width: 80%;
+    border: 3px solid var(--light);
+}

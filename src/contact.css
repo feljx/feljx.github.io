@@ -1,0 +1,11 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-body {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    font-style: italic;
+}

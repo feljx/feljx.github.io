@@ -8,22 +8,57 @@
 </head>
 
 <body>
-    <section class="home">
+    <section class="home page">
         <div class="header">
-            <div></div>
+            <img class="title" src="assets/title.svg">
+            <div class="subline">web developer</div>
         </div>
         <div class="separator">
-            <div class="separator-dot" />
-            <div class="separator-dot" />
-            <div class="separator-dot" />
+            <div class="separator-dot"></div>
+            <div class="separator-dot"></div>
+            <div class="separator-dot"></div>
+        </div>
+        <div class="menu">
+            <div class="menu-item">contact</div>
+            <div class="menu-item">portfolio</div>
+            <div class="menu-item">github</div>
         </div>
     </section>
 
-    <section class="contact">
-
+    <section class="contact page">
+        <div class="contact-header page-header">
+            <div class="header-dot">
+                <div></div>
+            </div>
+            <div class="contact-title">Contact</div>
+        </div>
+        <div class="contact-body">mail@felixsuhl.com</div>
     </section>
 
-    <!-- <script src="./index.js"></script> -->
+    <section class="portfolio page">
+        <div class="portfolio-header page-header">
+            <div class="header-dot">
+                <div></div>
+            </div>
+            <div class="portfolio-title">Portfolio</div>
+        </div>
+        <div class="portfolio-body">
+            <div class="starcatcher portfolio-item">
+                <div class="portfolio-item-title">Starcatcher</div>
+                <div class="portfolio-item-description">A simple Minesweeper clone. Allows clicking numbers to solve
+                    surrounding fields if enough flags are set.</div>
+                <img class="portfolio-item-image" src="assets/starcatcher.PNG">
+            </div>
+            <div class="mandelbrot portfolio-item">
+                <div class="portfolio-item-title">Mandelbrot set visualizer</div>
+                <div class="portfolio-item-description">A CPU-based Mandelbrot set visualizer for the web that can
+                    leverage WebAssembly and web workers to achieve okay performance for a non-GPU based algorithm.
+                </div>
+                <img class="portfolio-item-image" src="assets/mandelbrot.PNG">
+            </div>
+        </div>
+    </section>
+
 </body>
 
 </html>
