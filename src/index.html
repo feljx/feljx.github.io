@@ -7,56 +7,87 @@
     <title>felix</title>
 </head>
 
-<body>
+<body class="skew">
     <section class="home page">
-        <div class="header">
-            <img class="title" src="assets/title.svg">
-            <div class="subline">web developer</div>
-        </div>
-        <div class="separator">
-            <div class="separator-dot"></div>
-            <div class="separator-dot"></div>
-            <div class="separator-dot"></div>
-        </div>
-        <div class="menu">
-            <div class="menu-item">contact</div>
-            <div class="menu-item">portfolio</div>
-            <div class="menu-item">github</div>
+        <div class="title">
+            <div>Hi, I'm <span class="regular green">Felix</span>, </div>
+            <div>a <span class="regular">web developer</span>.</div>
         </div>
     </section>
 
-    <section class="contact page">
-        <div class="contact-header page-header">
-            <div class="header-dot">
-                <div></div>
-            </div>
-            <div class="contact-title">Contact</div>
+    <section class="about page">
+        <div class="about-text loose">
+            Based in Berlin, I specialize in creating <span class="semibold">simple</span>, <span
+                class="underlined">functional</span> & <span class="italic regular">beautiful</span> interfaces and apps
+            for the web.
         </div>
-        <div class="contact-body">mail@felixsuhl.com</div>
     </section>
 
     <section class="portfolio page">
-        <div class="portfolio-header page-header">
-            <div class="header-dot">
-                <div></div>
-            </div>
-            <div class="portfolio-title">Portfolio</div>
+
+        <div class="portfolio-text">
+            These are some of my personal projects.
         </div>
+
+
         <div class="portfolio-body">
-            <div class="starcatcher portfolio-item">
-                <div class="portfolio-item-title">Starcatcher</div>
-                <div class="portfolio-item-description">A simple Minesweeper clone. Allows clicking numbers to solve
-                    surrounding fields if enough flags are set.</div>
+            <div class="portfolio-item">
+                <div class="portfolio-item-body">
+                    <div class="portfolio-item-title">
+                        <span class="green">Starcatcher</span>
+                    </div></span>
+
+                    <div class="portfolio-item-description italic loose">A simple Minesweeper clone. Allows clicking
+                        numbers
+                        to solve
+                        surrounding fields if enough flags are set.</div>
+
+                    <div class="portfolio-item-tags">
+                        <div>React</div>
+                        <div>Typescript</div>
+                        <div>CSS</div>
+                    </div>
+                </div>
+
                 <img class="portfolio-item-image" src="assets/starcatcher.PNG">
             </div>
-            <div class="mandelbrot portfolio-item">
-                <div class="portfolio-item-title">Mandelbrot set visualizer</div>
-                <div class="portfolio-item-description">A CPU-based Mandelbrot set visualizer for the web that can
-                    leverage WebAssembly and web workers to achieve okay performance for a non-GPU based algorithm.
+
+            <div class="portfolio-item">
+                <div class="portfolio-item-body">
+                    <div class="portfolio-item-title">
+                        <span class="green">Mandelbrot set visualizer</span>
+                    </div>
+
+                    <div class="portfolio-item-description italic loose">A CPU-based Mandelbrot set visualizer for the
+                        web
+                        that can
+                        leverage WebAssembly and web workers to achieve okay performance for a non-GPU based
+                        algorithm.</div>
+
+                    <div class="portfolio-item-tags">
+                        <div>Typescript</div>
+                        <div>Web Workers</div>
+                        <div>WebAssembly</div>
+                        <div>CSS</div>
+                    </div>
                 </div>
+
                 <img class="portfolio-item-image" src="assets/mandelbrot.PNG">
             </div>
         </div>
+    </section>
+
+
+    <section class="contact page">
+        <div class="contact-text">
+            <div>
+                Contact me at <span class="regular green" id="email">felix@felixsuhl.com</span>
+                <div class="italic">(click to copy)<input id="email-input" type="email" value="felix@felixsuhl.com">
+                </div>
+            </div>
+            <div>and check out my <a class="regular green" id="github" href="https://github.com/feljx">GitHub</a>.</div>
+        </div>
+
     </section>
 
 </body>

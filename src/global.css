@@ -1,6 +1,9 @@
 :root {
-    --dark: #343d51;
-    --light: #c3d4ff;
+    /* --dark: #272c35; */
+    /* --dark: #1a1b26; */
+    --dark: #1a1b26;
+    --darker: #16161a;
+    --light: rgb(200, 210, 219);
     --green: #4ad8be;
 }
 
@@ -12,40 +15,50 @@ html {
 
 body {
     width: 100%;
-    height: 100%;
     margin: 0;
-    font-family: ZillaSlab, serif;
+
     color: var(--light);
+
+    font-family: ZillaSlab, serif;
+    font-size: 3.6rem;
+    font-weight: 200;
+    line-height: 1.2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .page {
     width: 100%;
-    min-height: 50vw;
 }
 
-.header-dot {
-    width: 1rem;
-    height: 1rem;
-    background-color: var(--green);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.green {
+    color: var(--green);
 }
 
-.header-dot > div {
-    width: 0.4rem;
-    height: 0.4rem;
-    background-color: var(--dark);
-    margin: 0.3rem;
+.regular {
+    font-weight: 400;
 }
 
-.page-header {
-    display: flex;
-    align-items: center;
-    font-size: 2rem;
-    margin-top: 10vw;
+.medium {
+    font-weight: 500;
 }
 
-.page-header > *:not(:last-child) {
-    margin-right: 1rem;
+.semibold {
+    font-weight: 600;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underlined {
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+}
+
+.loose {
+    line-height: 1.4;
 }

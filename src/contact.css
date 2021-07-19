@@ -1,11 +1,40 @@
 .contact {
+    height: 100vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-.contact-body {
-    margin-top: 2rem;
-    font-size: 1.8rem;
-    font-style: italic;
+.contact-text {
+    min-width: 60%;
+    max-width: 30rem;
+    /* min-height: 50%;
+    max-height: 40rem; */
+
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-text > *:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+#email {
+    cursor: pointer;
+}
+
+#email-input {
+    position: absolute;
+    width: 1px;
+    opacity: 0;
+    user-select: none;
+}
+
+#github {
+    text-decoration: none;
 }

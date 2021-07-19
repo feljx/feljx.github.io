@@ -71,6 +71,9 @@ const Config = (config_data) => ({
     plugins: config_data.plugins,
     // DEVTOOL OPTION
     devtool: config_data.mode === DEVELOPMENT_MODE ? 'source-map' : false,
+    devServer: {
+        port: 3000
+    },
     // MODULE
     module: {
         rules: [
